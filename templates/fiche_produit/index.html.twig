@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% for produit in produits %}
+        <h2 style="text-align: center">{{ produit.piece | upper}}</h2>
+        <hr>
+
+
+        <dl>
+            <dt><h4>Marque</h4></dt>
+            <dd>{{ produit.marque }}</dd>
+
+            <dt><h4>Modele</h4></dt>
+            <dd>{{ produit.modele | raw}}</dd>
+
+            <dt><h4>Image</h4></dt>
+            <dd><img src="{{ produit.image }}"alt="{{ produit.image }}" /></dd>
+        </dl>
+    {% endfor %}
+
+{% endblock %}
