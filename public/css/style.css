@@ -2,6 +2,9 @@
     font-style: italic;
 }
 
+p {
+    font-style: italic;
+}
 .dropdown-menu1{
     background-color: #2C3E50;
     margin-top: 150px;
@@ -9,7 +12,13 @@
     width: 50%;
     height: 350px;
 }
+.bouton-connexion {
+    background-color: #18BC9C;
+}
 
+.label-connexion {
+    color: white;
+}
 .card{
     height: 100%;
     background-color: #95999c;
