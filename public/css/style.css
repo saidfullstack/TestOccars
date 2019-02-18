@@ -1,19 +1,68 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+   color: #2C3E50;
+}
+
+.logo-occars{
+    width: 55%;
+}
+
 .h1-accueil{
     font-style: italic;
+    color: #B0413E;
+    margin-top: 35px;
+    font-weight: 900;
+    font-size: 100px;
 }
 
 p {
     font-style: italic;
+    color: whitesmoke;
+    margin-top: 100px;
 }
+
+.site-description{
+    font-size: 30px;
+}
+
+
+.container{
+    max-width: 100%;
+    padding: 0px;
+}
+.body-accueil {
+    background-image: url("../image/pieces-auto.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+}
+
+
 .dropdown-menu-connexion{
     background-color: #2C3E50;
     margin-top: 150px;
-    margin-left: 100px;
-    width: 50%;
+    margin-left: 200px;
+    width: 25%;
     height: 350px;
+    border-radius: 10px;
 }
+
+.body-connexion{
+    background-image: url("../image/login.jpg");
+}
+
+.btn-primary{
+    background-color: #2C3E50;
+    border-color: #abdde5;
+}
+
 .bouton-connexion {
-    background-color: #18BC9C;
+    background-color: #B0413E;
 }
 
 .label-connexion {
@@ -21,22 +70,57 @@ p {
 }
 .card{
     height: 100%;
-    background-color: #95999c;
+    background-color: #2C3E50;
+}
+
+.body-inscription{
+    background-image: url("../image/login.jpg");
 }
 
 .form-inscription{
     background-color: #2C3E50;
     margin-top: 150px;
-    margin-left: 100px;
-    width: 70%;
-    height: 370px;
+    margin-left: 450px;
+    width: 55%;
+    height: 380px;
     padding: 25px;
+    padding-bottom: 25%;
 }
 
 .bouton-inscription{
-    background-color: #18BC9C;
+    background-color: #B0413E;
+}
+
+.bouton-accueil{
+    background-color: #B0413E;
+}
+
+.titre-carte-accueil{
+    color: whitesmoke;
 }
 
 .label-inscription {
     color: white;
+}
+
+.col-3{
+    max-width: 20%;
+    margin-left: 65px;
+    margin-top: 350px;
+    margin-bottom: 50px;
+}
+
+.body-commander{
+    background-image: url("../image/login.jpg");
+}
+
+.card-commander {
+    width: 45%;
+    height: 300px;
+    margin-left: 200px;
+    margin-top: 150px;
+}
+
+.dorpdown-connexion{
+    color: #95999c;
 }

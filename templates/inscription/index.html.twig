@@ -4,8 +4,17 @@
 
 {% block body %}
 
+    <body class="body-inscription">
     <form class="form-inscription">
         <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputPassword4" class="label-inscription">Nom</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Nom">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4" class="label-inscription">Prénom</label>
+                <input type="password" class="form-control" id="inputPassword4" placeholder="Prénom">
+            </div>
             <div class="form-group col-md-6">
                 <label for="inputEmail4" class="label-inscription">Email</label>
                 <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
@@ -22,18 +31,32 @@
         <div class="form-row">
             <div class="form-group col-md-6">
                 <label for="inputCity" class="label-inscription">Ville</label>
-                <input type="text" class="form-control" id="inputCity">
+                <input type="text" class="form-control" id="inputCity" placeholder="Ville">
             </div>
             <div class="form-group col-md-4">
-                <label for="inputState" class="label-inscription">Département</label>
+                <label for="inputState" class="label-inscription" >Département</label>
                 <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                    <option selected>Choisir...</option>
+                    <option value="nord">
+                        <p>Nord</p>
+                    </option>
+                    <option value="pas-de-calais">
+                        <p>Pas-de-calais</p>
+                    </option>
+                    <option value="aisne">
+                        <p>Aisne</p>
+                    </option>
+                    <option value="picardie">
+                        <p>Picardie</p>
+                    </option>
+                    <option value="oise">
+                        <p>Oise</p>
+                    </option>
                 </select>
             </div>
         </div>
         <button type="submit" class="btn btn-primary bouton-inscription">S'inscrire</button>
     </form>
-
+    <body>
 
 {% endblock %}

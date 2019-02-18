@@ -4,10 +4,10 @@
 
 {% block body %}
 
-    <div class="container-accueil">
+    <body class="body-accueil">
         <div style="text-align: center">
             <h1 class="h1-accueil">OCCARS</h1>
-            <p>Vous cherchez une pièce mécanique d'occasion pour votre voiture? Faites votre choix parmi notre gamme de produits !</p>
+            <p class="site-description">Vous cherchez une pièce mécanique d'occasion pour votre voiture? Faites votre choix parmi notre gamme de produits !</p>
         </div>
 
         <div class="row">
@@ -15,10 +15,10 @@
                 <div class="card">
                     <img src="{{ asset('image/cardan.jpg') }}" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Cardan</h5>
+                        <h5 class="card-title titre-carte-accueil">Cardan</h5>
                         <p class="card-text">Un joint universel est un joint ou un couplage reliant des tiges rigides dont les axes sont inclinés les uns aux autres.
                             Il est couramment utilisé dans les arbres qui transmettent un mouvement rotatif.</p>
-                        <a href="{{ path('fiche_produit', {'piece': 'cardan'}) }}" class="btn btn-primary">Voir la liste des cardans</a>
+                        <a href="{{ path('fiche_produit', {'piece': 'cardan'}) }}" class="btn btn-primary bouton-accueil">Voir la liste des cardans</a>
                     </div>
                 </div>
             </div>
@@ -26,9 +26,9 @@
                 <div class="card" >
                     <img src="{{ asset('image/retroviseur.jpg') }}" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Retroviseur</h5>
+                        <h5 class="card-title titre-carte-accueil">Retroviseur</h5>
                         <p class="card-text">Dispositif formé d'un miroir qui permet au conducteur d'un véhicule de voir derrière lui sans avoir à se retourner.</p>
-                        <a href="{{ path('fiche_produit', {'piece': 'retroviseur'}) }}" class="btn btn-primary">Voir la liste des retroviseurs</a>
+                        <a href="{{ path('fiche_produit', {'piece': 'retroviseur'}) }}" class="btn btn-primary bouton-accueil">Voir la liste des retroviseurs</a>
                     </div>
                 </div>
             </div>
@@ -36,10 +36,10 @@
                 <div class="card" >
                     <img src="{{ asset('image/amortisseur.jpg') }}" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Amortisseur</h5>
+                        <h5 class="card-title titre-carte-accueil">Amortisseur</h5>
                         <p class="card-text">L'amortisseur absorbe l'énergie et permet au véhicule de retrouver rapidement sa position d'équilibre.
                             L'amortisseur freine les oscillations du ressort et transforme cette énergie en chaleur.</p>
-                        <a href="{{ path('fiche_produit', {'piece': 'amortisseur'}) }}" class="btn btn-primary">Voir la liste des amortisseurs</a>
+                        <a href="{{ path('fiche_produit', {'piece': 'amortisseur'}) }}" class="btn btn-primary bouton-accueil">Voir la liste des amortisseurs</a>
                     </div>
                 </div>
             </div>
@@ -47,13 +47,13 @@
                 <div class="card" >
                     <img src="{{ asset('image/triangle.jpg') }}" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Triangle</h5>
+                        <h5 class="card-title titre-carte-accueil">Triangle</h5>
                         <p class="card-text">Le triangle de suspension est le composant qui relie le moyeu de roue au châssis d'un véhicule :
                             c'est un élément déterminant pour sa tenue de route.</p>
-                        <a href="{{ path('fiche_produit', {'piece': 'triangle'}) }}" class="btn btn-primary">Voir la liste des triangles</a>
+                        <a href="{{ path('fiche_produit', {'piece': 'triangle'}) }}" class="btn btn-primary bouton-accueil">Voir la liste des triangles</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </body>
 {% endblock %}

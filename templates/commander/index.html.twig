@@ -2,6 +2,26 @@
 
 {% block body %}
 
-
-
+    <body class="body-commander">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card card-commander">
+                <div class="card-body">
+                    <h5 class="card-title label-connexion">Possedez-vous un compte ?</h5>
+                    <p class="card-text">Pour commander ou mettre en ligne une pièce , connectez-vous !</p>
+                    <a href="{{ path('connexion') }}" class="btn btn-primary bouton-connexion">Se connecter</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card card-commander">
+                <div class="card-body">
+                    <h5 class="card-title label-inscription">Pas encore inscris ?</h5>
+                    <p class="card-text">Vous devez disposer d'un compte pour pouvoir vous rendre dans la rubrique de votre choix</p>
+                    <a href="{{ path('inscription') }}" class="btn btn-primary bouton-inscription">S'inscrire</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
 {% endblock %}
