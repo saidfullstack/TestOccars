@@ -2,22 +2,37 @@
 
 {% block body %}
 
+    {#{% for produit in produits %}#}
+
+        {#<h2 style="text-align: center">{{ produit.piece | upper}}</h2>#}
+        {#<hr>#}
+
+
+        {#<dl>#}
+            {#<dt><h4>Marque</h4></dt>#}
+            {#<dd>{{ produit.marque }}</dd>#}
+
+            {#<dt><h4>Modele</h4></dt>#}
+            {#<dd>{{ produit.modele | raw}}</dd>#}
+
+            {#<dt><h4>Image</h4></dt>#}
+            {#<dd><img src="{{ produit.image }}"alt="{{ produit.image }}" /></dd>#}
+        {#</dl>#}
+    {#{% endfor %}#}
+
     {% for produit in produits %}
+    <h2 style="text-align: center">{{ produit.piece | upper}}</h2>
 
-        <h2 style="text-align: center">{{ produit.piece | upper}}</h2>
-        <hr>
-
-
-        <dl>
-            <dt><h4>Marque</h4></dt>
-            <dd>{{ produit.marque }}</dd>
-
-            <dt><h4>Modele</h4></dt>
-            <dd>{{ produit.modele | raw}}</dd>
-
-            <dt><h4>Image</h4></dt>
-            <dd><img src="{{ produit.image }}"alt="{{ produit.image }}" /></dd>
-        </dl>
+    <table border="1" cellpadding="5" cellspacing="0" width="90%" style="margin:auto">
+    <tr>
+        <td>Marque : {{ produit.marque }}</td>
+        <td>Modéle : {{ produit.modele | raw}}</td>
+        <td>Image :</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td><img src="{{ produit.image }}"alt="{{ produit.image }}" /></td>
+    </tr>
     {% endfor %}
-
 {% endblock %}

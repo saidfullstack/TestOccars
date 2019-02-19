@@ -85,6 +85,7 @@ p {
     height: 380px;
     padding: 25px;
     padding-bottom: 25%;
+    border-radius: 15px;
 }
 
 .bouton-inscription{
@@ -95,8 +96,13 @@ p {
     background-color: #B0413E;
 }
 
+.cadre-bouton-accueil{
+    padding: 10px;
+}
+
 .titre-carte-accueil{
     color: whitesmoke;
+    text-align: center;
 }
 
 .label-inscription {
@@ -115,10 +121,15 @@ p {
 }
 
 .card-commander {
-    width: 45%;
-    height: 300px;
-    margin-left: 200px;
+    width: 75%;
+    height: 250px;
+    margin-left: 150px;
     margin-top: 150px;
+    border-radius: 15px;
+}
+
+.card{
+    display: flex;
 }
 
 .dorpdown-connexion{
