@@ -3,47 +3,44 @@
 namespace App\Controller;
 
 use App\Entity\Client;
-use Doctrine\Common\Persistence\ObjectManager;
+use App\Form\ClientType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\PasswordType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class InscriptionController extends AbstractController
 {
     /**
      * @Route("/inscription", name="inscription")
      */
-    public function index(Request $request, ObjectManager $manager)
+    public function index(Request $request, UserPasswordEncoderInterface $passwordEncoder)
     {
+        // 1) build the form
         $client = new Client();
+        $form = $this->createForm(\App\Form\ClientType::class, $client);
 
-//        $form = $this->createFormBuilder($client)
-//            ->add("nom", TextType::class)
-//            ->add("prenom", TextType::class)
-//            ->add("email", EmailType::class)
-//            ->add("password", PasswordType::class)
-//            ->add("adresse", TextType::class)
-//            ->add("ville", TextType::class)
-//            ->add("departement", TextType::class)
-//            ->getForm();
-//
-//        $form->handleRequest($request);
-//
-//        if ($form->isSubmitted() && $form->isValid()) {
-//
-//            $data = $form->getData();
-//
-//            dump($data);
-//        }
+        // 2) handle the submit (only happen on POST)
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
 
+            // 3) Encode the password ( possibilité aussi de passer par DOctrine Listener)
+            $password = $passwordEncoder->encodePassword($client, $client->getPlainPassword());
+            $client->setPassword($password);
 
-        return $this->render('inscription/index.html.twig', [
-            'controller_name' => 'InscriptionController',
-//              'formClient' => $form->createView()
+            // 4) save the Client
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($client);
+            $entityManager->flush();
 
-        ]);
+            return $this->redirectToRoute('commander');
+        }
+
+        return $this->render(
+            'inscription/index.html.twig',
+            array('form' => $form->createView())
+        );
+
     }
+
 }
